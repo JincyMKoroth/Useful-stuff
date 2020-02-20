@@ -10,6 +10,7 @@ export default {
 
         for (const element of this._targetElements) {
             this._activeClass = element.classList[0] + '--active';
+            
             this._observer    = new MutationObserver((mutationsList, observer) => {
                 for (const mutation of mutationsList) {
                     if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
